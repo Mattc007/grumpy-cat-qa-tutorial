@@ -1,0 +1,1491 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-21 17:21:50 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/railties-4.0.2/lib/rails/templates/rails/welcome/index.html.erb (35.0ms)
+Completed 200 OK in 66ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140721223009)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "location" varchar(255), "about" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140721223009"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-21 17:32:50 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/railties-4.0.2/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 20ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-07-21 17:32:56 -0500
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.0ms)
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (22.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-07-21 17:33:19 -0500
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  actionpack (4.0.2) lib/abstract_controller/base.rb:131:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__44805208585777914__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-07-21 17:37:10 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 6ms
+
+ActionView::MissingTemplate (Missing template users/index, application/index with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/mcatrett/Developer/projects/grumpy-cat-qa-tutorial/app/views"
+):
+  actionpack (4.0.2) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.2) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:413:in `_run__2726586041692036692__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__44805208585777914__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-07-21 17:37:34 -0500
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (26.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.6ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "dgreene@riffwire.edu"], ["location", "Hermosa Beach"], ["name", "Joseph Parker"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "mriley@ooba.gov"], ["location", "Torrance"], ["name", "Margaret Dean"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "abaker@voomm.gov"], ["location", "San Juan Capistrano"], ["name", "Kathryn Cox"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "mhenderson@gevee.edu"], ["location", "Pico Rivera"], ["name", "Jesse Mendoza"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "dkelly@yombu.mil"], ["location", "Oakland"], ["name", "Rose George"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "aryan@skiba.org"], ["location", "Desert Hot Springs"], ["name", "Craig Anderson"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "rwagner@youopia.name"], ["location", "Brea"], ["name", "Nicole Jacobs"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "rlopez@gigabox.org"], ["location", "Woodland"], ["name", "Joyce Burns"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "rwhite@blognation.info"], ["location", "American Canyon"], ["name", "John Lee"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "cnichols@npath.info"], ["location", "San Jacinto"], ["name", "Amanda Martinez"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "arussell@centimia.net"], ["location", "Rancho Santa Margarita"], ["name", "Nancy Robinson"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "cross@fatz.biz"], ["location", "Fullerton"], ["name", "Jean Fields"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "dhenry@mydeo.info"], ["location", "Fillmore"], ["name", "Carlos Marshall"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "pbrooks@gabtune.biz"], ["location", "Maricopa"], ["name", "Amy Cruz"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "dalexander@thoughtsphere.name"], ["location", "Millbrae"], ["name", "Joshua Webb"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "mchapman@flipopia.com"], ["location", "Kerman"], ["name", "Jose Lawson"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "pstanley@edgeblab.net"], ["location", "Capitola"], ["name", "Jeremy King"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "fwallace@skyvu.biz"], ["location", "Santee"], ["name", "Betty Hall"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "gwalker@youspan.edu"], ["location", "Redondo Beach"], ["name", "Nicholas Greene"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jdiaz@thoughtworks.net"], ["location", "Trinidad"], ["name", "Edward Ross"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "bharris@feedfish.org"], ["location", "Marysville"], ["name", "Amy Fernandez"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "lrussell@babbleset.biz"], ["location", "Ferndale"], ["name", "Arthur Stewart"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "krodriguez@skipstorm.info"], ["location", "Fontana"], ["name", "Barbara Morgan"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "tcoleman@demivee.org"], ["location", "Paramount"], ["name", "Margaret Williams"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (32.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "bprice@oyondu.edu"], ["location", "South San Francisco"], ["name", "Lori Rose"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "swatkins@gevee.edu"], ["location", "Redlands"], ["name", "Michelle Phillips"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "pgordon@devshare.net"], ["location", "Colusa"], ["name", "Matthew Robinson"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jgomez@livefish.name"], ["location", "Newman"], ["name", "Cheryl Graham"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "ssims@flashspan.name"], ["location", "Jackson"], ["name", "Tammy Burns"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "drobertson@fivespan.info"], ["location", "La Verne"], ["name", "John Moreno"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "byoung@twitternation.mil"], ["location", "King City"], ["name", "Nicholas Gutierrez"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "dbishop@oyoloo.name"], ["location", "Imperial"], ["name", "Frank Pierce"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "pryan@youspan.net"], ["location", "San Leandro"], ["name", "Mary Patterson"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jedwards@voolith.com"], ["location", "Lake Forest"], ["name", "Ernest Vasquez"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jcollins@shuffledrive.org"], ["location", "Kingsburg"], ["name", "Timothy Russell"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "brodriguez@quinu.mil"], ["location", "Arcadia"], ["name", "Larry Lynch"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jandrews@mudo.name"], ["location", "Shafter"], ["name", "Alice Hill"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "rhoward@divanoodle.gov"], ["location", "Carson"], ["name", "Jason Hansen"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "cbennett@mymm.biz"], ["location", "Calistoga"], ["name", "Fred Garrett"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "smorgan@flipbug.gov"], ["location", "Dorris"], ["name", "Mary Jones"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "gross@digitube.org"], ["location", "Delano"], ["name", "Ruby Hansen"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "hday@trudoo.gov"], ["location", "Bellflower"], ["name", "Doris Taylor"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "awatson@trilia.org"], ["location", "Buena Park"], ["name", "Timothy Carr"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "mward@meedoo.info"], ["location", "Lomita"], ["name", "Mary Adams"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "hpeters@topiczoom.mil"], ["location", "Tiburon"], ["name", "Russell Daniels"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "pdiaz@skimia.biz"], ["location", "Maricopa"], ["name", "Kimberly Marshall"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "lpeterson@topiczoom.mil"], ["location", "Ridgecrest"], ["name", "Jeffrey Barnes"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "ssullivan@rhyloo.net"], ["location", "Los Gatos"], ["name", "Albert Hill"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "bgomez@blogxs.name"], ["location", "Laguna Niguel"], ["name", "Donna Wallace"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "dtorres@gabvine.gov"], ["location", "Chino Hills"], ["name", "Debra Kelley"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "emyers@buzzdog.name"], ["location", "Chula Vista"], ["name", "Benjamin Hayes"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "awilliamson@cogidoo.net"], ["location", "Montague"], ["name", "Sharon Reyes"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "rsims@flipstorm.net"], ["location", "Carpinteria"], ["name", "Anne Fox"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "bburton@eimbee.com"], ["location", "La Palma"], ["name", "Margaret Lane"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "tsims@twimbo.biz"], ["location", "Oxnard"], ["name", "Joe Romero"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "elynch@cogilith.biz"], ["location", "Coalinga"], ["name", "Dennis Adams"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jhernandez@lazzy.name"], ["location", "Rancho Mirage"], ["name", "Michelle Hanson"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jcarr@cogibox.mil"], ["location", "Loma Linda"], ["name", "Henry Alexander"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jmendoza@ntags.org"], ["location", "Solana Beach"], ["name", "Samuel Green"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "cmeyer@flashdog.biz"], ["location", "Selma"], ["name", "Michael West"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "cperry@rhynoodle.net"], ["location", "Shafter"], ["name", "Michael Weaver"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jdaniels@skipstorm.mil"], ["location", "Walnut Creek"], ["name", "Harold Garza"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "rmedina@photojam.biz"], ["location", "Pomona"], ["name", "Christine Stanley"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jcrawford@digitube.biz"], ["location", "Thousand Oaks"], ["name", "Christine Perkins"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "amoreno@leenti.org"], ["location", "City of Commerce"], ["name", "Irene Greene"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "rpierce@youfeed.name"], ["location", "San Fernando"], ["name", "Ann Hawkins"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "ehernandez@oozz.org"], ["location", "Santa Clara"], ["name", "Anna Day"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "gmccoy@skimia.org"], ["location", "Pasadena"], ["name", "Carol Knight"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "helliott@realfire.name"], ["location", "Santa Ana"], ["name", "Phyllis Ryan"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jhamilton@kanoodle.mil"], ["location", "Willits"], ["name", "Victor Matthews"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jmendoza@quire.org"], ["location", "Lake Forest"], ["name", "Andrea Gilbert"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "pday@skipstorm.biz"], ["location", "Fremont"], ["name", "Evelyn Knight"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "tbrooks@wikibox.edu"], ["location", "Aliso Viejo"], ["name", "Norma Andrews"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "amorales@aivee.net"], ["location", "Hillsborough"], ["name", "Wanda Jordan"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jreid@quamba.com"], ["location", "City of Industry"], ["name", "Alan Lynch"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "panderson@blogtag.com"], ["location", "Seal Beach"], ["name", "Lois Stewart"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "woliver@eadel.biz"], ["location", "Beaumont"], ["name", "Terry Dixon"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jstone@photospace.name"], ["location", "Seal Beach"], ["name", "Lisa Gardner"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "grichards@zoomcast.net"], ["location", "Beaumont"], ["name", "Louise White"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "apeters@eadel.biz"], ["location", "Ceres"], ["name", "Janet Alexander"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "cbishop@bubbletube.edu"], ["location", "Dos Palos"], ["name", "Carol Mendoza"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "smitchell@muxo.net"], ["location", "Healdsburg"], ["name", "Jerry Bishop"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "aedwards@skilith.name"], ["location", "Gardena"], ["name", "Richard Patterson"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "phamilton@topicstorm.com"], ["location", "Calipatria"], ["name", "Jacqueline Moore"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "jchapman@browsezoom.com"], ["location", "Dorris"], ["name", "Karen Kennedy"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "vwest@tagchat.net"], ["location", "Newport Beach"], ["name", "Douglas Martinez"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "cmoreno@minyx.gov"], ["location", "Plymouth"], ["name", "Susan Stewart"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00], ["email", "hgray@muxo.info"], ["location", "Baldwin Park"], ["name", "Louise Gomez"], ["updated_at", Mon, 21 Jul 2014 22:41:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00], ["email", "erichardson@brainverse.edu"], ["location", "Calistoga"], ["name", "Anthony Bradley"], ["updated_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00], ["email", "wporter@brainbox.mil"], ["location", "Port Hueneme"], ["name", "Beverly Sanders"], ["updated_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00], ["email", "sjohnson@tavu.name"], ["location", "Livingston"], ["name", "Ernest Murray"], ["updated_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00], ["email", "kmurray@fadeo.edu"], ["location", "San Jacinto"], ["name", "Kenneth Nichols"], ["updated_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00], ["email", "jgraham@tagchat.gov"], ["location", "Del Mar"], ["name", "Joseph Long"], ["updated_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00], ["email", "krichards@twitterbridge.org"], ["location", "West Sacramento"], ["name", "Roy Myers"], ["updated_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00], ["email", "rbishop@agimba.info"], ["location", "Hughson"], ["name", "Jacqueline Dixon"], ["updated_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00], ["email", "rwilson@browsecat.info"], ["location", "Buena Park"], ["name", "Doris Morris"], ["updated_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00], ["email", "pberry@voomm.edu"], ["location", "City of Commerce"], ["name", "Donna Ray"], ["updated_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00], ["email", "hfernandez@skimia.edu"], ["location", "Claremont"], ["name", "Betty Chapman"], ["updated_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00], ["email", "cmoore@thoughtbridge.org"], ["location", "Delano"], ["name", "Louis Henry"], ["updated_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("about", "created_at", "email", "location", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["about", "lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum"], ["created_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00], ["email", "bbell@shuffledrive.biz"], ["location", "Colusa"], ["name", "Sean Gutierrez"], ["updated_at", Mon, 21 Jul 2014 22:41:46 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-21 17:41:53 -0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  actionpack (4.0.2) lib/abstract_controller/base.rb:131:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__44805208585777914__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-21 17:42:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 11ms
+
+ActionView::MissingTemplate (Missing template users/show, application/show with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/mcatrett/Developer/projects/grumpy-cat-qa-tutorial/app/views"
+):
+  actionpack (4.0.2) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.2) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:413:in `_run__2726586041692036692__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__44805208585777914__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-21 17:43:28 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template users/show, application/show with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/mcatrett/Developer/projects/grumpy-cat-qa-tutorial/app/views"
+):
+  actionpack (4.0.2) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.2) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:413:in `_run__2726586041692036692__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__44805208585777914__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-21 17:43:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template users/show, application/show with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/mcatrett/Developer/projects/grumpy-cat-qa-tutorial/app/views"
+):
+  actionpack (4.0.2) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.2) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:413:in `_run__2726586041692036692__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__44805208585777914__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2014-07-21 17:43:32 -0500
+
+ActionController::RoutingError (No route matches [GET] "/user/1"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (27.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-21 17:43:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template users/show, application/show with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/mcatrett/Developer/projects/grumpy-cat-qa-tutorial/app/views"
+):
+  actionpack (4.0.2) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.2) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:413:in `_run__2726586041692036692__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__44805208585777914__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-21 17:44:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template users/show, application/show with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/mcatrett/Developer/projects/grumpy-cat-qa-tutorial/app/views"
+):
+  actionpack (4.0.2) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.2) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:413:in `_run__2726586041692036692__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__44805208585777914__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-21 17:44:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 40ms
+
+ActionView::MissingTemplate (Missing template users/show, application/show with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/mcatrett/Developer/projects/grumpy-cat-qa-tutorial/app/views"
+):
+  actionpack (4.0.2) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.2) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:413:in `_run__1635162878670552760__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2760662715435710438__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-21 17:44:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template users/show, application/show with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/mcatrett/Developer/projects/grumpy-cat-qa-tutorial/app/views"
+):
+  actionpack (4.0.2) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.2) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:413:in `_run__1635162878670552760__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2760662715435710438__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mcatrett/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mcatrett/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-21 17:45:25 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 650ms (Views: 648.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 17:45:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:26 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-07-21 17:45:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:26 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:26 -0500
+
+
+Started GET "/users/36" for 127.0.0.1 at 2014-07-21 17:45:31 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-07-21 17:45:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:31 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 17:45:31 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:31 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:31 -0500
+
+
+Started GET "/users/36" for 127.0.0.1 at 2014-07-21 17:45:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "36"]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 4.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:43 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:43 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:43 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-07-21 17:45:43 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 17:45:43 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:43 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 17:45:43 -0500
+
+
+Started GET "/users/36/edit" for 127.0.0.1 at 2014-07-21 17:48:23 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  Rendered users/edit.html.erb within layouts/application (101.7ms)
+Completed 200 OK in 108ms (Views: 105.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 17:48:23 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-07-21 17:48:23 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 17:48:23 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 17:48:23 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 17:48:23 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-07-21 17:48:23 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 17:48:23 -0500
