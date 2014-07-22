@@ -1,0 +1,21 @@
+<h1>Sightings</h1>
+
+<table>
+  <thead>
+    <th>Location</th>
+    <th>When</th>
+    <th>Seen by</th>
+    <th>Comment</th>
+  </thead>
+
+  <tbody>
+    <% @sightings.each do |sighting| %>
+      <tr>
+        <td><%= sighting.location %></td>
+        <td><%= sighting.when %></td>
+        <td><%= sighting.user.name %></td>
+        <td><%= sighting.comment %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

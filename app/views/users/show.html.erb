@@ -2,3 +2,12 @@
 <h3><%= @user.email %></h3>
 <h3><%= @user.location %></h3>
 <p><%= @user.about %></p>
+
+<% if @user.sightings.empty? %>
+  <h3>No sightings</h3>
+<% else %>
+  <% @user.sightings.each do |sighting| %>
+    <p><%= sighting.when %> @ <%= sighting.location %></p>
+    <p><%= sighting.comment %></p>
+  <% end %>
+<% end %>
