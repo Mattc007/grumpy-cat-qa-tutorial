@@ -14,4 +14,12 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.tubular.1.0
+//= require bootstrap-datepicker
 //= require_tree .
+
+$('document').ready(function() {
+  var options = { videoId: 'INscMGmhmX4', start: 3 };
+  $('#wrapper').tubular(options);
+});
+

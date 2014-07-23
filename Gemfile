@@ -12,6 +12,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'simple_form'
 gem 'forgery'
+gem 'high_voltage'
+gem 'bootstrap-datepicker-rails'
 
 group :development do
   gem 'sqlite3'
@@ -20,5 +22,8 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'unicorn'
+  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 end
 
