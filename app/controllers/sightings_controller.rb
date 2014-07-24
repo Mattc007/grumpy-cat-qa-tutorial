@@ -2,7 +2,7 @@ class SightingsController < ApplicationController
   before_filter :find_sighting, only: [:show]
 
   def index
-    @sightings = Sighting.most_recent
+    @sightings = Sighting.most_recent.limit(100)
   end
 
   def new
