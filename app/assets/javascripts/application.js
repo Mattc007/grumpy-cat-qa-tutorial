@@ -15,7 +15,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery.tubular.1.0
-//= require bootstrap-datepicker
+//= require moment
+//= require bootstrap-datetimepicker
 //= require_tree .
 
 $('document').ready(function() {

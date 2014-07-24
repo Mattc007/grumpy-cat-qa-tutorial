@@ -10,10 +10,12 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'simple_form'
+gem 'simple_form', '3.1.0.rc2'
 gem 'forgery'
 gem 'high_voltage'
-gem 'bootstrap-datepicker-rails'
+gem 'momentjs-rails'
+gem 'datetimepicker-rails', '>= 3.0.0', :git => 'git://github.com/zpaulovics/datetimepicker-rails.git',  \
+    :branch => 'master', :submodules => true
 
 group :development do
   gem 'sqlite3'

@@ -1,10 +1,11 @@
-<h1>Sightings</h1>
+<h1 class="page-header">Sightings<%= link_to 'Add a sighting!', new_sighting_path, class: 'btn btn-primary btn-custom' %></h1>
 
-<table>
+<table class="table table-condensed table-hover">
   <thead>
     <th>Location</th>
     <th>When</th>
     <th>Seen by</th>
+    <th>Mood</th>
     <th>Comment</th>
   </thead>
 
@@ -13,7 +14,8 @@
       <tr>
         <td><%= sighting.location %></td>
         <td><%= sighting.when %></td>
-        <td><%= sighting.user.name %></td>
+        <td><%= link_to sighting.user.name, user_path(sighting.user) %></td>
+        <td><%= sighting.mood %></td>
         <td><%= sighting.comment %></td>
       </tr>
     <% end %>

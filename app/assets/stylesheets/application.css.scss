@@ -8,7 +8,7 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require bootstrap-datepicker3
+ *= require bootstrap-datetimepicker
  *= require_self
  *= require_tree .
  */
@@ -25,6 +25,13 @@ body {
   padding-bottom: 20px;
 }
 
+footer {
+  margin-top: 10%;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+
 /* Override Rail's default error calls with Bootstrap 3 */
 .field_with_errors {
   @extend .has-error;
@@ -33,11 +40,11 @@ body {
 /* Override Bootstrap 3 font location */
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../assets/glyphicons-halflings-regular.eot');
-  src: url('../assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-       url('../assets/glyphicons-halflings-regular.woff') format('woff'),
-       url('../assets/glyphicons-halflings-regular.ttf') format('truetype'),
-       url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+       url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+       url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
 h1 {
@@ -54,7 +61,6 @@ h1 {
 
 .buttons {
   text-align: center;
-  margin-bottom: 100px;
   margin-top: 45px;
 }
 
@@ -66,6 +72,13 @@ h1 {
   border-radius: 4px;
   margin: 10px;
   border: none;
+}
+
+.btn-freaking-huge {
+  @extend .btn-lg;
+  padding: 26px 52px;
+  font-size: 28px;
+  margin-top: 0;
 }
 
 .input-box {
@@ -82,9 +95,41 @@ h1 {
 }
 
 .grumpy-form {
-  background-image: url('grumpy_cat/grumpy-cat-funny-image.jpg');
-  background-repeat: repeat-y; /* for vertical repeat */
-  background-repeat: repeat-x; /* for horizontal repeat */
-  min-height: 1200px;
-  height: 100%;
+  margin-top: 10%;
+  z-index: 0;
+}
+
+.grumpified {
+  background: url('grumpy_cat/grumpy-cat-funny-image.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.grumpilicious {
+  background: url('grumpy_cat/o-GRUMPY-PHARRELL-facebook.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.profile-pic {
+  float:left;
+  padding: 25px;
+}
+
+.profile-image {
+  height: 250px;
+  width: 250px;
+}
+
+.profile-sightings {
+   padding: 0 25px;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
 }

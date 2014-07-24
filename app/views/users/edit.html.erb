@@ -1,6 +1,11 @@
-<%= simple_form_for @user do |f| %>
-  <%= f.input :name %>
-  <%= f.input :email %>
-  <%= f.input :location %>
-  <%= f.input :about %>
-<% end %>
+<div class="row">
+  <div class="col-md-offset-3 col-md-6 col-md-offset-3 well grumpy-form">
+    <%= simple_form_for @user, class: 'form' do |f| %>
+      <%= f.input :name, input_html: { class: 'form-control' } %>
+      <%= f.input :email, input_html: { class: 'form-control' } %>
+      <%= f.input :location, input_html: { class: 'form-control' } %>
+      <%= f.input :about, as: :text, input_html: { class: 'form-control', rows:"6" } %>
+      <%= f.button :submit, 'Save Profile', class: 'btn btn-primary btn-lg btn-custom pull-right' %>
+    <% end %>
+  </div>
+</div>

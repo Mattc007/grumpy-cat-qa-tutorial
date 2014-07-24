@@ -1,13 +1,54 @@
-<h1><%= @user.name %></h1>
-<h3><%= @user.email %></h3>
-<h3><%= @user.location %></h3>
-<p><%= @user.about %></p>
+<div class="row" style="padding-top:10%;">
+  <div class="col-md-offset-2 col-md-8 panel">
+    <div class="row">
+      <div class="profile-pic col-span-4">
+        <% if @user.id == 14 %>
+          <%= image_tag 'grumpy_cat/icon_256.png', class: "profile-image" %>
+        <% else %>
+          <%= image_tag 'grumpy_cat/facebook_grumpy.png', class: "profile-image" %>
+        <% end %>
+      </div>
+      <div class="profile-info col-span-8">
+        <h1><%= @user.name %></h1>
+        <% if @user.id == 14 %>
+          <%= link_to 'Add a sighting!', new_sighting_path, class: 'btn btn-primary btn-custom' %>
+          <%= link_to 'Edit profile', edit_user_path(@user), class: 'btn btn-danger btn-custom' %>
+        <% end %>
+        <div>
+          <dl>
+            <dt class="">Email:</dt><dd class=""><%= @user.email %></dd>
+            <dt class="">Location:</dt><dd class=""><%= @user.location %></dd>
+            <dt class="">About:</dt><dd class=""><%= @user.about %></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
 
-<% if @user.sightings.empty? %>
-  <h3>No sightings</h3>
-<% else %>
-  <% @user.sightings.each do |sighting| %>
-    <p><%= sighting.when %> @ <%= sighting.location %></p>
-    <p><%= sighting.comment %></p>
-  <% end %>
-<% end %>
+    <div class="row">
+      <div class="profile-sightings panel col-span-12">
+        <% if @user.sightings.empty? %>
+          <h3>No sightings :(</h3>
+        <% else %>
+          <table class="table table-condensed table-hover">
+            <thead>
+              <th>Location</th>
+              <th>When</th>
+              <th>Mood</th>
+              <th>Comment</th>
+            </thead>
+            <tbody>
+              <% @user.sightings.most_recent.each do |sighting| %>
+              <tr>
+                <td><%= sighting.location %></td>
+                <td><%= sighting.when %></td>
+                <td><%= sighting.mood %></td>
+                <td><%= sighting.comment %></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
