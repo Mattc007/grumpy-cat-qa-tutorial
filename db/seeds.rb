@@ -10,7 +10,7 @@ end
 User.all.each do |user|
   Random.new.rand(0..10).times do |n|
     Sighting.create(location: Forgery::Address.city,
-                    when: Forgery::Date.date(max_delta: 1200, past: true),
+                    timestamp: Forgery::Date.date(max_delta: 1200, past: true),
                     comment: Forgery::LoremIpsum.words(10),
                     user_id: user.id,
                     mood: Sighting::VALID_MOODS[n % Sighting::VALID_MOODS.count])

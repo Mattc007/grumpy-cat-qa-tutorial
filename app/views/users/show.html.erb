@@ -40,7 +40,7 @@
               <% @user.sightings.most_recent.each do |sighting| %>
               <tr>
                 <td><%= sighting.location %></td>
-                <td><%= sighting.when %></td>
+                <td><%= sighting.timestamp %></td>
                 <td><%= sighting.mood %></td>
                 <td><%= sighting.comment %></td>
               </tr>

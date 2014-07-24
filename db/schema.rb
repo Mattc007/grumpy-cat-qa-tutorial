@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140723211724) do
+ActiveRecord::Schema.define(version: 20140724011757) do
 
   create_table "friendship", force: true do |t|
     t.integer  "user_id"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20140723211724) do
 
   create_table "sightings", force: true do |t|
     t.string   "location"
-    t.datetime "when"
+    t.datetime "timestamp"
     t.string   "comment"
     t.integer  "user_id"
     t.datetime "created_at"

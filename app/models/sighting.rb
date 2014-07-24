@@ -1,6 +1,6 @@
 class Sighting < ActiveRecord::Base
   belongs_to :user
-  scope :most_recent, -> { order("sightings.'when' DESC") }
+  scope :most_recent, -> { order("sightings.timestamp DESC") }
 
   VALID_MOODS = ['Grumpy',
                  'Somewhat Grumpy',

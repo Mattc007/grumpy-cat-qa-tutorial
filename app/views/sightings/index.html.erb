@@ -13,7 +13,7 @@
     <% @sightings.each do |sighting| %>
       <tr>
         <td><%= sighting.location %></td>
-        <td><%= sighting.when %></td>
+        <td><%= sighting.timestamp %></td>
         <td><%= link_to sighting.user.name, user_path(sighting.user) %></td>
         <td><%= sighting.mood %></td>
         <td><%= sighting.comment %></td>

@@ -11,7 +11,7 @@ class SightingsController < ApplicationController
   end
 
   def create
-    @sighting = Sighting.new(sighting_params.merge(user_id: 14, when: DateTime.now))
+    @sighting = Sighting.new(sighting_params.merge(user_id: 14, timestamp: DateTime.now))
 
     if @sighting.save
       redirect_to sightings_path, notice: 'Sighting logged!'
@@ -27,6 +27,6 @@ class SightingsController < ApplicationController
   end
 
   def sighting_params
-    params.require(:sighting).permit(:location, :when, :comment, :mood)
+    params.require(:sighting).permit(:location, :timestamp, :comment, :mood)
   end
 end

@@ -3,7 +3,7 @@
     <h3 style="text-align:center;"><%= image_tag 'grumpy_cat/icon_256.png', class: 'nav-bar icon' %>  <%= @user.name %></h3>
     <%= simple_form_for @sighting, class: 'form' do |f| %>
       <%= f.input :location, input_html: { class: 'form-control' } %>
-      <%= f.input :when, as: :datetime_picker, input_html: { class: 'form-control' } %>
+      <%= f.input :timestamp, as: :datetime_picker, input_html: { class: 'form-control' } %>
       <%= f.input :mood, collection: Sighting::VALID_MOODS, input_html: { class: 'form-control' } %>
       <%= f.input :comment, as: :text, input_html: { class: 'form-control', rows:"6" } %>
       <%= f.button :submit, 'Add sighting!', class: 'btn btn-primary btn-lg btn-custom pull-right' %>
